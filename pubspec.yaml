@@ -51,6 +51,14 @@ flutter:
     - assets/images/sponsor2.png
     - assets/images/sponsor3.png
     - assets/images/sponsor4.png
+    - assets/images/facebook.png
+    - assets/images/linkedin.png
+    - assets/images/play.png
+    - assets/images/youtube.png
+    - assets/images/united-kingdom.png
+    - assets/images/spain.png
+    - assets/images/germany.png
+    - assets/images/france.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
