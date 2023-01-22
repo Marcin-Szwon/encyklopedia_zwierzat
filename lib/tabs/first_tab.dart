@@ -40,7 +40,7 @@ class FirstTab extends StatelessWidget {
         return Card(
           child: ListTile(
             leading: CircleAvatar(
-              radius: 28,
+              radius: 30,
               backgroundImage: NetworkImage(user.urlAvatar),
             ),
             title: Text(user.username),
