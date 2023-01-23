@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 
 
 class HomeScreen extends StatelessWidget {
-  static final String title = 'Navigation Drawer';
+  static final String title = 'Menu Nawigacyjne';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -53,7 +53,8 @@ class _MainPageState extends State<MainPage> {
     drawer: NavigationDrawerWidget(),
     // endDrawer: NavigationDrawerWidget(),
     appBar: AppBar(
-      title: Text("15 pozycji"),
+      backgroundColor: Color.fromRGBO(114, 95, 50  , 1),
+      title: Text("8 pozycji"),
       actions: [
         IconButton(
           icon: const Icon(Icons.share),
@@ -71,21 +72,32 @@ class _MainPageState extends State<MainPage> {
       child: DefaultTabController(
         length: 3,
         child: Scaffold(
+          backgroundColor: Color.fromRGBO(114, 95, 50  , 0.7),
           body: Column(
             children: [
               TabBar(tabs: [
                 Tab(
-                  child: Text('Wszystkie'),
+                  child: Text(
+                    'Wszystkie',
+                  style: const TextStyle(
+                    fontSize: 18,
+                  ),),
                 ),
                 Tab(
-                  child: Text('Ssaki'),
+                  child: Text('Ssaki', style: const TextStyle(
+                    fontSize: 18,
+                  ),),
                 ),
                 Tab(
-                  child: Text('Ptaki'),
+                  child: Text('Ptaki',style: const TextStyle(
+                    fontSize: 18,
+                  ),),
                 ),
               ]),
               Expanded(
-                child: TabBarView(children: [
+                child: TabBarView(
+
+                  children: [
                   FirstTab(),
                   SecondTab(),
                   ThirdTab(),
