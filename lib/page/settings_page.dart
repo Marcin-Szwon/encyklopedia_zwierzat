@@ -110,9 +110,14 @@ class _SettingPageUIState extends State<SettingsPageUI> {
                   )
               ),
               onPressed: () {},
-              child: Text("Wyloguj", style: TextStyle(
-                  fontSize: 16, fontWeight: FontWeight.bold, letterSpacing: 2.2, color: Colors.black
-              )),
+              child: TextButton(
+                style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                ),
+                onPressed: () { },
+                child: Text('Zaakceptuj'),
+              )
             ),
           )
         ],
@@ -135,7 +140,7 @@ class _SettingPageUIState extends State<SettingsPageUI> {
             scale: 0.7,
             child: CupertinoSwitch(
                 activeColor: Colors.lightGreen,
-                trackColor: Colors.black,
+                trackColor: Colors.grey[700],
                 value: value,
                 onChanged: (bool newValue){
                   onChangeMethod(newValue);
