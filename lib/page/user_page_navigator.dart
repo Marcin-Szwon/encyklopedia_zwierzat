@@ -13,7 +13,7 @@ class UserPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.orange,
+          backgroundColor: Color.fromRGBO(114, 95, 50  , 1),
           title: Text(name),
           centerTitle: true,
         ),

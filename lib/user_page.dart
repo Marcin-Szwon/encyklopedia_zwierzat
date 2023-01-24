@@ -13,6 +13,7 @@ class UserPage1 extends StatelessWidget{
     backgroundColor: Color.fromRGBO(235, 190, 85  , 1),
     appBar: AppBar(
       title: Text(user.username),
+      backgroundColor: Color.fromRGBO(114, 95, 50  , 1),
     ),
     body: Center(
 
