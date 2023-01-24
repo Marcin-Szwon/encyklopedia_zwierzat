@@ -1,9 +1,6 @@
-import 'dart:async';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'splash.dart';
-import 'widget/button_widget.dart';
 import 'widget/navigation_drawer_widget.dart';
 import 'tabs/first_tab.dart';
 import 'tabs/second_tab.dart';
@@ -17,7 +14,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  static final String title = 'Navigation Drawer';
+  static final String title = 'Menu Nawigacyjne';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -108,46 +105,6 @@ class _MainPageState extends State<MainPage> {
         )
       )
 
-    ),
-  );
-}
-
-class _MainPageState1 extends State<MainPage> {
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 3,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text('tabbar')
-          ),
-        ),
-    );
-  }
-
-}
-
-
-Widget buildSearchField() {
-  final color = Colors.white;
-
-  return TextField(
-    style: TextStyle(color: color),
-    decoration: InputDecoration(
-      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-      hintText: 'Search',
-      hintStyle: TextStyle(color: color),
-      prefixIcon: Icon(Icons.search, color: color),
-      filled: true,
-      fillColor: Colors.white12,
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(5),
-        borderSide: BorderSide(color: color.withOpacity(0.7)),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(5),
-        borderSide: BorderSide(color: color.withOpacity(0.7)),
-      ),
     ),
   );
 }

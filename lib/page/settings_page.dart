@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:youtube/main.dart';
 
-class FavouritesPage extends StatelessWidget {
+class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -13,14 +12,6 @@ class FavouritesPage extends StatelessWidget {
       home: SettingsPageUI(),
     );
   }
-  // Widget build(BuildContext context) => Scaffold(
-  //       appBar: AppBar(
-  //         title: Text('Ustawienia'),
-  //         centerTitle: true,
-  //         backgroundColor: Colors.orangeAccent,
-  //       ),
-  //       home: SettingsPageUI()
-  //     );
 }
 
 class SettingsPageUI extends StatefulWidget{
@@ -63,6 +54,15 @@ class _SettingPageUIState extends State<SettingsPageUI> {
         )
     ),
     body: Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [Color(0xFFEBBE55),Color(0xFF594A26),]
+        ),
+      ),
       padding: const EdgeInsets.all(10),
       child: ListView(
         children: [
@@ -71,7 +71,7 @@ class _SettingPageUIState extends State<SettingsPageUI> {
             children: [
               Icon(
                 Icons.person,
-                color: Colors.orange,
+                color: Colors.black,
               ),
               SizedBox(width: 10),
               Text("Konto",
@@ -87,7 +87,7 @@ class _SettingPageUIState extends State<SettingsPageUI> {
           SizedBox(height: 40),
           Row(
             children: [
-              Icon(Icons.account_tree, color: Colors.orange),
+              Icon(Icons.account_tree, color: Colors.black),
               SizedBox(width: 10),
               Text("Pozostałe", style: TextStyle(
                 fontSize: 22,
@@ -106,12 +106,12 @@ class _SettingPageUIState extends State<SettingsPageUI> {
               style:OutlinedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)
+                      borderRadius: BorderRadius.circular(20),
                   )
               ),
               onPressed: () {},
               child: Text("Wyloguj", style: TextStyle(
-                  fontSize: 16, letterSpacing: 2.2, color: Colors.black
+                  fontSize: 16, fontWeight: FontWeight.bold, letterSpacing: 2.2, color: Colors.black
               )),
             ),
           )
@@ -129,13 +129,13 @@ class _SettingPageUIState extends State<SettingsPageUI> {
           Text(title, style:TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
-            color: Colors.grey[600]
+            color: Colors.black
           )),
           Transform.scale(
             scale: 0.7,
             child: CupertinoSwitch(
-                activeColor: Colors.orange,
-                trackColor: Colors.grey,
+                activeColor: Colors.lightGreen,
+                trackColor: Colors.black,
                 value: value,
                 onChanged: (bool newValue){
                   onChangeMethod(newValue);
@@ -180,9 +180,9 @@ class _SettingPageUIState extends State<SettingsPageUI> {
             Text(title, style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
-                color: Colors.grey[600]
+                color: Colors.black
             )),
-            Icon(Icons.arrow_forward, color: Colors.grey)
+            Icon(Icons.arrow_forward, color: Colors.black)
           ],
         ),
       ),

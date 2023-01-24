@@ -1,10 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'tabs/first_tab.dart';
-import 'tabs/second_tab.dart';
-import 'tabs/third_tab.dart';
-
-
 
 class UserPage1 extends StatelessWidget{
   final User user;
@@ -78,26 +73,6 @@ class UserPage1 extends StatelessWidget{
         ],
       )
     )
-    // body: Center(
-    //   child: Column(
-    //     children: <Widget>[
-    //       Image.network(
-    //         user.urlAvatar,
-    //         width: double.infinity,
-    //         fit: BoxFit.cover,
-    //       ),
-    //       const SizedBox(height: 16),
-    //       Text(
-    //         user.username,
-    //         style: const TextStyle(
-    //           fontSize: 40,
-    //           fontWeight: FontWeight.bold,
-    //         ),
-    //       ),
-    //
-    //     ],
-    //   ),
-    // ),
   );
 }
 

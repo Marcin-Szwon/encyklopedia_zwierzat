@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:ui';
-import 'package:flutter/services.dart';
-import '../page/favourites_page.dart';
-import '../page/people_page.dart';
-import '../page/user_page.dart';
+import '../page/settings_page.dart';
+import '../page/language_page.dart';
+import '../page/user_page_navigator.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -196,12 +193,12 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => PeoplePage(),
+          builder: (context) => LanguagePage(),
         ));
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => FavouritesPage(),
+          builder: (context) => SettingsPage(),
         ));
         break;
     }
