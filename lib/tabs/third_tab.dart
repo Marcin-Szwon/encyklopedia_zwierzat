@@ -53,8 +53,20 @@ class ThirdTab extends StatelessWidget {
               radius: 28,
               backgroundImage: NetworkImage(user.urlAvatar),
             ),
-            title: Text(user.username),
-            subtitle: Text(user.email),
+            title: Text(
+              user.username,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            subtitle: Text(
+              user.email,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
             trailing: const Icon(Icons.arrow_forward),
             onTap: (){
               Navigator.of(context).push(MaterialPageRoute(

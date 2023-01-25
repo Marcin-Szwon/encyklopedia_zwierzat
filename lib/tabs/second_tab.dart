@@ -49,18 +49,30 @@ class SecondTab extends StatelessWidget {
           color: Color.fromRGBO(235, 190, 85  , 1),
         child: ListTile(
             visualDensity: VisualDensity(vertical: 4),
-            leading: CircleAvatar(
-              radius: 28,
-              backgroundImage: NetworkImage(user.urlAvatar),
+          leading: CircleAvatar(
+            radius: 28,
+            backgroundImage: NetworkImage(user.urlAvatar),
+          ),
+          title: Text(
+            user.username,
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w400,
             ),
-            title: Text(user.username),
-            subtitle: Text(user.email),
-            trailing: const Icon(Icons.arrow_forward),
-            onTap: (){
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => UserPage1(user: user),
-              ));
-            },
+          ),
+          subtitle: Text(
+            user.email,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          trailing: const Icon(Icons.arrow_forward),
+          onTap: (){
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => UserPage1(user: user),
+            ));
+          },
           ),
         );
       },
